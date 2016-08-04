@@ -11,6 +11,7 @@ export declare class ToastConfig {
     toastComponent: typeof Toast;
 }
 export declare class ToastrConfig extends ToastConfig {
+    maxOpened: number;
     autoDismiss: boolean;
     iconClasses: {
         error: string;
@@ -18,7 +19,6 @@ export declare class ToastrConfig extends ToastConfig {
         success: string;
         warning: string;
     };
-    maxOpened: number;
     newestOnTop: boolean;
     preventDuplicates: boolean;
 }

@@ -11,7 +11,7 @@ export declare class DomPortalHost extends BasePortalHost {
     private _componentResolver;
     constructor(_hostDomElement: Element, _componentResolver: ComponentResolver);
     /** Attach the given ComponentPortal to DOM element using the ComponentResolver. */
-    attachComponentPortal<T>(portal: ComponentPortal<T>): Promise<ComponentRef<T>>;
+    attachComponentPortal<T>(portal: ComponentPortal<T>, newestOnTop: boolean): Promise<ComponentRef<T>>;
     attachTemplatePortal(portal: TemplatePortal): Promise<Map<string, any>>;
     dispose(): void;
 }
