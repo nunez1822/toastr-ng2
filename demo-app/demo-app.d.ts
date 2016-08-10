@@ -1,5 +1,5 @@
 import { ViewContainerRef } from '@angular/core';
-import { ToastrService, ToastrConfig } from '../components/toastr/toastr';
+import { ToastrConfig, ToastrService } from '../components/toastr/toastr';
 export declare class DemoApp {
     private toastrService;
     private viewContainerRef;
