@@ -28,6 +28,3 @@ export declare class ToastrService {
     private isDuplicate(message);
     private _buildNotification(type, message, title?, optionsOverride?);
 }
-export declare const TOASTR_PROVIDERS: any;
-export declare class ToastrModule {
-}

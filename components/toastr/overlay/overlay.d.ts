@@ -1,4 +1,4 @@
-import { ComponentResolver } from '@angular/core';
+import { ComponentFactoryResolver } from '@angular/core';
 import { OverlayRef } from './overlay-ref';
 import { OverlayContainer } from './overlay-container';
 /**
@@ -11,9 +11,9 @@ import { OverlayContainer } from './overlay-container';
  */
 export declare class Overlay {
     private _overlayContainer;
-    private _componentResolver;
+    private _componentFactoryResolver;
     private _paneElement;
-    constructor(_overlayContainer: OverlayContainer, _componentResolver: ComponentResolver);
+    constructor(_overlayContainer: OverlayContainer, _componentFactoryResolver: ComponentFactoryResolver);
     /**
      * Creates an overlay.
      * @param state State to apply to the overlay.

@@ -1,6 +1,7 @@
 import { Toast } from './toast-component';
 export declare class ToastConfig {
     closeButton: boolean;
+    extendedTimeOut: number;
     progressBar: boolean;
     timeOut: number;
     toastClass: string;

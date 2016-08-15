@@ -1,4 +1,4 @@
-import { ComponentResolver, ComponentRef } from '@angular/core';
+import { ComponentFactoryResolver, ComponentRef } from '@angular/core';
 import { BasePortalHost, ComponentPortal, TemplatePortal } from './portal';
 /**
  * A PortalHost for attaching portals to an arbitrary DOM element outside of the Angular
@@ -8,8 +8,8 @@ import { BasePortalHost, ComponentPortal, TemplatePortal } from './portal';
  */
 export declare class DomPortalHost extends BasePortalHost {
     private _hostDomElement;
-    private _componentResolver;
-    constructor(_hostDomElement: Element, _componentResolver: ComponentResolver);
+    private _componentFactoryResolver;
+    constructor(_hostDomElement: Element, _componentFactoryResolver: ComponentFactoryResolver);
     /** Attach the given ComponentPortal to DOM element using the ComponentResolver. */
     attachComponentPortal<T>(portal: ComponentPortal<T>, newestOnTop: boolean): Promise<ComponentRef<T>>;
     attachTemplatePortal(portal: TemplatePortal): Promise<Map<string, any>>;

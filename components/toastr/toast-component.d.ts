@@ -5,6 +5,7 @@ export declare class Toast implements OnDestroy {
     private toastrService;
     toastId: number;
     timeout: number;
+    removealTimeout: number;
     message: string;
     title: string;
     toastType: string;
@@ -19,4 +20,6 @@ export declare class Toast implements OnDestroy {
     updateProgress(): void;
     tapToast(): void;
     remove(): void;
+    delayedHideToast(): void;
+    stickAround(): void;
 }
