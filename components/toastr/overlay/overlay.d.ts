@@ -21,7 +21,6 @@ export declare class Overlay {
      */
     create(positionClass: string): OverlayRef;
     getPaneElement(positionClass: string): HTMLElement;
-    dispose(): void;
     /**
      * Creates the DOM element for an overlay and appends it to the overlay container.
      * @returns Promise resolving to the created element.
