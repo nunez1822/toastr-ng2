@@ -7,9 +7,9 @@ import { ComponentType } from '../overlay/generic-component-type';
 export declare abstract class Portal<T> {
     private _attachedHost;
     /** Attach this portal to a host. */
-    attach(host: PortalHost, newestOnTop: boolean): Promise<T>;
+    attach(host: PortalHost, newestOnTop: boolean): T;
     /** Detach this portal from its host */
-    detach(): Promise<void>;
+    detach(): void;
     /** Whether this portal is attached to a host. */
     isAttached: boolean;
     /**
@@ -51,15 +51,15 @@ export declare class TemplatePortal extends Portal<Map<string, any>> {
     locals: Map<string, any>;
     constructor(template: TemplateRef<any>, viewContainerRef: ViewContainerRef);
     origin: ElementRef;
-    attach(host: PortalHost, newestOnTop: boolean, locals?: Map<string, any>): Promise<Map<string, any>>;
-    detach(): Promise<void>;
+    attach(host: PortalHost, newestOnTop: boolean, locals?: Map<string, any>): Map<string, any>;
+    detach(): void;
 }
 /**
  * A `PortalHost` is an space that can contain a single `Portal`.
  */
 export interface PortalHost {
-    attach(portal: Portal<any>, newestOnTop: boolean): Promise<any>;
-    detach(): Promise<any>;
+    attach(portal: Portal<any>, newestOnTop: boolean): any;
+    detach(): any;
     dispose(): void;
     hasAttached(): boolean;
 }
@@ -76,10 +76,10 @@ export declare abstract class BasePortalHost implements PortalHost {
     private _isDisposed;
     /** Whether this host has an attached portal. */
     hasAttached(): boolean;
-    attach(portal: Portal<any>, newestOnTop: boolean): Promise<any>;
-    abstract attachComponentPortal<T>(portal: ComponentPortal<T>, newestOnTop: boolean): Promise<ComponentRef<T>>;
-    abstract attachTemplatePortal(portal: TemplatePortal): Promise<Map<string, any>>;
-    detach(): Promise<void>;
+    attach(portal: Portal<any>, newestOnTop: boolean): any;
+    abstract attachComponentPortal<T>(portal: ComponentPortal<T>, newestOnTop: boolean): ComponentRef<T>;
+    abstract attachTemplatePortal(portal: TemplatePortal): Map<string, any>;
+    detach(): void;
     dispose(): void;
     setDisposeFn(fn: () => void): void;
 }

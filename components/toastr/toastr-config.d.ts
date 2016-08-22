@@ -1,7 +1,11 @@
+import { EventEmitter } from '@angular/core';
 import { Toast } from './toast-component';
 export declare class ToastConfig {
     closeButton: boolean;
     extendedTimeOut: number;
+    onHidden: EventEmitter<any>;
+    onShown: EventEmitter<any>;
+    onTap: EventEmitter<any>;
     progressBar: boolean;
     timeOut: number;
     toastClass: string;

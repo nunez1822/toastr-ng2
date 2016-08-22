@@ -1,13 +1,12 @@
 import { ViewContainerRef, Injector } from '@angular/core';
 import { Overlay } from './overlay/overlay';
 import { OverlayRef } from './overlay/overlay-ref';
-import { PortalHost } from './portal/portal';
 import { ToastConfig, ToastrConfig } from './toastr-config';
 export interface ActiveToast {
     toastId: number;
     message: string;
-    portal?: Promise<PortalHost>;
-    overlayRef?: Promise<OverlayRef>;
+    portal?: any;
+    overlayRef?: OverlayRef;
 }
 export declare class ToastrService {
     toastrConfig: ToastrConfig;

@@ -19,9 +19,9 @@ export declare class Overlay {
      * @param state State to apply to the overlay.
      * @returns A reference to the created overlay.
      */
-    create(positionClass: string): Promise<OverlayRef>;
+    create(positionClass: string): OverlayRef;
+    getPaneElement(positionClass: string): HTMLElement;
     dispose(): void;
-    getPaneElement(positionClass: string): Promise<HTMLElement>;
     /**
      * Creates the DOM element for an overlay and appends it to the overlay container.
      * @returns Promise resolving to the created element.
@@ -41,3 +41,5 @@ export declare class Overlay {
      */
     private _createOverlayRef(pane);
 }
+/** Providers for Overlay and its related injectables. */
+export declare const OVERLAY_PROVIDERS: (typeof Overlay | typeof OverlayContainer)[];

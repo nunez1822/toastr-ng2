@@ -7,7 +7,7 @@ export declare class OverlayRef implements PortalHost {
     private _portalHost;
     private _pane;
     constructor(_portalHost: PortalHost, _pane: HTMLElement);
-    attach(portal: Portal<any>, newestOnTop: boolean): Promise<any>;
+    attach(portal: Portal<any>, newestOnTop: boolean): any;
     detach(): Promise<any>;
     dispose(): void;
     hasAttached(): boolean;
